@@ -1,9 +1,15 @@
 Group Name   : Group 05
+
 Website Title: XPeditionary
+
 Group Leader : P.Katsigiannis
+
 Group Member1: A. Georgiou
+
 Group Member2: I. Gkasioudis
+
 Group Member3: S. Roidos
+
 Group Member4: P. Tsitsimpikos
 
 ## Instructions:
