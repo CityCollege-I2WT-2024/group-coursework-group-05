@@ -1,10 +1,10 @@
-Group Name   :
-Website Title:
-Group Leader :
-Group Member1:
-Group Member2:
-Group Member3:
-Group Member4:
+Group Name   : Group 05
+Website Title: XPeditionary
+Group Leader : P.Katsigiannis
+Group Member1: A. Georgiou
+Group Member2: I. Gkasioudis
+Group Member3: S. Roidos
+Group Member4: P. Tsitsimpikos
 
 ## Instructions:
 - clone this repo
