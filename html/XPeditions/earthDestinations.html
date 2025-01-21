@@ -1,0 +1,276 @@
+<!-- Developed by I. Gkasioudis -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Earth Destinations</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../../other/xpStyle.css">
+        <style>
+                /* General styles for layout */
+                main{
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    min-height: 100px;
+                }
+                section div {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    align-items: left; /* Align text and image to the top */
+                    justify-content: left;
+                    margin: 10px 0;
+                    gap: 20px; /* Space between elements */
+                }
+                .text-content{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    max-width: 50%;
+                    text-align: justify;
+                    margin-bottom: 10px;
+                }
+                /* Style for headings */
+                main h2 {
+                    text-align: center;
+                    display: center;
+                }
+            
+            
+                /* Styles for the image and button container */
+                .image-button-container {
+                    display: flex;
+                    flex-direction: column; /* Stack image and button vertically */
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px; /* Space between the image and button */
+                    min-width: 300px;                   
+                    flex: 1; /* Ensure proper sizing within the container */
+                    text-align: center;
+                }
+            
+                /* Styles for images */
+                main img {
+                    width: 300px;
+                    height: 300px;
+                    display: block;
+                    margin: 0 auto;
+                    border: 2px solid black;
+                    border-radius: 5px;
+                    cursor: grab;
+                }
+            
+                /* Center-align buttons below the images */
+                main button {
+                    margin-top: 10px auto;
+                    padding: 10px 20px;          /* Add padding for a larger clickable area */
+                    background-color: black;  /* Set background color to blue */
+                    color: white;               /* White text for contrast */
+                    border: none;               /* Remove default borders */
+                    border-radius: 5px;         /* Add rounded corners */
+                    cursor: pointer;            /* Change cursor to pointer on hover */
+                }
+
+                main button:hover {
+                    background-color: rgb(155, 229, 36);
+                }
+
+                section p{
+                    text-align: justify;
+                }
+
+                .image-map-container {
+                    display: flex;
+                    flex-direction: row; /* Side-by-side layout */
+                    align-items: center; /* Center-align items */
+                    gap: 20px; /* Space between image and map */
+                }
+
+                .map {
+                    flex: 1; /* Allow map to grow/shrink within the container */
+                    max-width: 400px; /* Ensure map doesn't exceed max width */
+                    height: 300px; /* Keep height consistent */
+                    border: 0; /* Optional: cleaner look */
+                    border-radius: 5px; /* Optional: rounded corners */
+                }
+                
+        </style>
+        <script type="text/javascript" src="../../other/darkmode.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <nav class="topnav">
+                <input type="checkbox" id="sidebar-active">
+                <label for="sidebar-active" class="open-sidebar-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                </label>
+
+                <label id="overlay" for="sidebar-active"></label>
+                <div class="links-container">
+                    <label for="sidebar-active" class="close-sidebar-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                    </label>
+                    <a href="../../index.html" id="logo"><img src="../../images/Katsigiannis/clientLogo.png" alt="XPeditionary Logo"><pre> </pre><h1>XPeditionary</h1></a>
+                    <a href="./xpeditions.html" class="current">XPeditions</a>
+                    <a href="../About Us/aboutUs.html">About Us</a>
+                    <a href="../Touch Base/touchBase.html">Touch Base</a>
+                    <button id="mode">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/></svg>
+                    </button>
+                </div>
+            </nav>  
+        </header>
+        
+        <main>
+            <section>
+                <div>
+                    <!--Agios Mattheos-->
+                    <div>
+                        <div class="text-content">
+                                <h2>Agios Mattheos</h2>
+                                <p>Agios Mattheos, a picturesque village in Corfu, is a paradise for motocross and mountain biking enthusiasts. Surrounded by lush olive groves, rolling hills, and rugged trails, the area offers diverse terrain for thrilling rides. Motocross riders can enjoy challenging dirt tracks, while mountain bikers can explore scenic routes that wind through forests and traditional villages. With its blend of natural beauty and adrenaline-pumping adventures, Agios Mattheos promises an unforgettable experience for outdoor sports lovers.</p>
+                                <h2>Sports in this area</h2>
+                                <ol>
+                                    <li>Motocross</li>
+                                    <li>mountain biking</li>
+                                </ol>
+                        </div>
+                        <div class="image-map-container">
+                            </div>
+                                <div class="image-button-container">
+                                    <img src="../../images/Gkasioudis/A.Mattheos-1.jpg" alt="A.Mattheos-1" class="agiosmat-image">
+                                    <button onclick="changeImage('agiosmat')">Next Image</button>
+                                </div>
+                                <div>
+                                    <iframe class="map" 
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12315.338740359637!2d19.866180010987357!3d39.49564734563636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135ca122d974d495%3A0x8649c7eebbc691dc!2zzpHOsy4gzpzOsc-EzrjOsc6vzr_PgiA0OTAgODQ!5e0!3m2!1sel!2sgr!4v1737399127500!5m2!1sel!2sgr" 
+                                        allowfullscreen="" 
+                                        loading="lazy" 
+                                        referrerpolicy="no-referrer-when-downgrade">
+                                    </iframe>
+                                </div>
+                            </div>    
+                        </div>    
+                    </div>
+
+                    <!--Attiki-->
+                    <div>
+                        <div class="text-content">
+                                <h2>Attiki</h2>
+                                <p>Attiki combines urban energy with natural beauty, making it an ideal destination for both skateboarding and rock climbing. The city boasts vibrant skate parks, such as Latraac and OAKA, where skaters can test their skills on ramps and bowls. For rock climbers, nearby spots like Mount Hymettus and the crags of Filopappou Hill offer challenging routes with stunning views of the Acropolis. Whether grinding rails or scaling rocks, Athens is a hub of excitement for adventure seekers.</p>
+                                <h2>Sports in this area</h2>
+                                <ol>
+                                    <li>Rock climbing</li>
+                                    <li>Skateboarding</li>
+                                </ol>
+                        </div>
+                        <div class="image-map-container">
+                            <div>
+                                <div class="image-button-container">
+                                    <img src="../../images/Gkasioudis/Attiki-1.jpg" alt="Attiki-1" class="attiki-image">
+                                    <button onclick="changeImage('attiki')">Next Image</button>
+                                </div>
+                                <div>
+                                    <iframe class="map" 
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50310.60536916668!2d23.697139698245298!3d37.99083001421942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd1f067043f1%3A0x2736354576668ddd!2zzpHOuM6uzr3OsQ!5e0!3m2!1sel!2sgr!4v1737399394111!5m2!1sel!2sr"
+                                        allowfullscreen="" 
+                                        loading="lazy" 
+                                        referrerpolicy="no-referrer-when-downgrade">
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>       
+                    </div>
+                    
+                    <!--Crete-->
+                    <div>
+                        <div class="text-content">
+                                <h2>Crete</h2>
+                                <p>Crete offers a thrilling playground for adventure enthusiasts, blending the adrenaline of motocross with the challenges of rock climbing. The island's rugged terrain and dirt trails make it a haven for motocross riders, with routes that wind through scenic gorges and mountain paths. For rock climbers, Crete's limestone cliffs and seaside crags provide diverse climbing experiences, from beginner-friendly walls to challenging overhangs with breathtaking views of the Aegean. Whether revving engines or scaling heights, Crete promises an unforgettable adventure.</p>
+                                <h2>Sports in this area:</h2>
+                                <ol>
+                                    <li>Motocross</li>
+                                    <li>Rock climbing</li>
+                                </ol>
+                        </div> 
+                        <div class="image-map-container">
+                            <div>
+                                <div class="image-button-container">
+                                    <img src="../../images/Gkasioudis/Crete-1.jpg" alt="Crete-1" class="crete-image">
+                                    <button onclick="changeImage('crete')">Next Image</button>
+                                </div>
+                                <div>
+                                    <iframe class="map" 
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d833583.770347203!2d24.25663651825723!3d35.30134457837791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x149a555aa4cf0283%3A0x69ac157a30fcbb59!2zzprPgc6uz4TOtw!5e0!3m2!1sel!2sgr!4v1737399908256!5m2!1sel!2sgr" 
+                                        allowfullscreen="" 
+                                        loading="lazy" 
+                                        referrerpolicy="no-referrer-when-downgrade">
+                                    </iframe>
+                                </div>
+                            </div>        
+                        </div>
+                    </div>    
+                </div>
+                <p>Do you have the sport and destination down? You can <a href="./bookNow.html">Book Now</a>!</p>
+                <p>Or, you can continue exploring <a href="./xpeditions.html">XPeditions</a>.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025, XPeditionary</p>
+            <p>Powered by <a href="../About Us/devTeam.html">XPx5</a></p>
+        </footer>
+
+        <!-- JavaScript -->
+        <script>
+            // Define images for each activity
+            const images = {
+                agiosmat:[
+                    "../../images/Gkasioudis/A.Mattheos-1.jpg",
+                    "../../images/Gkasioudis/A.Mattheos-2.jpg",
+                    "../../images/Gkasioudis/A.Mattheos-3.jpg",
+                    "../../images/Gkasioudis/A.Mattheos-4.jpg"
+                ],
+                attiki:[
+                    "../../images/Gkasioudis/Attiki-1.jpg",
+                    "../../images/Gkasioudis/Attiki-2.jpg",
+                    "../../images/Gkasioudis/Attiki-3.jpg",
+                    "../../images/Gkasioudis/Attiki-4.jpg"
+                ],
+                crete:[
+                    "../../images/Gkasioudis/Crete-1.jpg",
+                    "../../images/Gkasioudis/Crete-2.jpg",
+                    "../../images/Gkasioudis/Crete-3.jpg",
+                    "../../images/Gkasioudis/Crete-4.jpg"
+                ]
+            };
+
+            // Track the current index for each activity
+            const currentIndex = {
+                agiosmat: 0,
+                attiki: 0,
+                crete: 0
+            };
+
+            // Function to change image
+            function changeImage(activity) {
+                const activityImages = images[activity];
+                const activityIndex = currentIndex[activity];
+
+                // Update the image index
+                currentIndex[activity] = (activityIndex + 1) % activityImages.length;
+
+                // Get the image element and update the src
+                const imageElement = document.querySelector(`.${activity}-image`);
+                imageElement.src = activityImages[currentIndex[activity]];
+            }
+        </script>
+    </body>
+</html>

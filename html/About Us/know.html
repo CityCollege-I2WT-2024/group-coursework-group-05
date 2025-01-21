@@ -1,0 +1,352 @@
+<!--Developed by Andreas Georgiou-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../../other/xpStyle.css">
+        <title>Know Your Strengths & Limits</title>
+    </head>
+    <style>
+            .page-know #vertical-item-know {
+                background-color: rgb(155, 229, 36);;  
+            }
+
+            main p{
+                padding: 5px;
+            }
+
+            h3,li{
+                margin-bottom: 10px;
+            }
+
+            ul li{
+                margin-top: 10px;
+            }
+            ul{
+                padding-left: 20px;
+            }
+
+            main h2{
+                text-decoration: underline;
+            }
+            
+            section{
+                margin-bottom: 20px; 
+                padding-top: 10px;
+                padding-bottom: 20px;  
+                padding-left: 20px; 
+                padding-right: 20px; 
+                border: 1px solid #615d5d8d; 
+                box-shadow: 0 0 0 20px rgb(2, 29, 24);
+            }
+            .vertical-stack {
+                display: flex;
+                flex-direction: column;  
+                align-items: flex-start; 
+                gap: 15px;               
+                margin-top: 20px;
+                padding: 15px;
+                padding-left:35px;
+            }
+
+            
+            .vertical-item {
+                display: flex;
+                align-items: right;     
+                gap: 15px;               
+                background-color: #040202;
+                padding: 20px;
+                border-radius: 8px;
+                width: 100%;
+                max-width: 450px;
+            }
+
+            .icon {
+                width: 50px;             
+                height: 50px;
+                float: left;
+                margin-right: 20px;            
+            }
+
+            .vertical-item p {
+                font-size: 18px;
+                color: #fff9f9;
+                line-height: 3;
+                margin: 0px;
+                white-space: nowrap;
+            }
+
+            .vertical-item:hover a{
+                text-decoration: underline black;
+            }
+
+            .vertical-item:hover {
+                transform: scale(1.1); 
+                background-color: rgb(155, 229, 36);;
+            }
+
+    </style>
+    <script type="text/javascript" src="../../other/darkmode.js" defer></script>
+
+    <body>
+        <header>
+            <nav class="topnav">
+                <input type="checkbox" id="sidebar-active">
+                <label for="sidebar-active" class="open-sidebar-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                </label>
+
+                <label id="overlay" for="sidebar-active"></label>
+                <div class="links-container">
+                    <label for="sidebar-active" class="close-sidebar-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                    </label>
+                    
+                    <a href="../../index.html" id="logo"><img src = "../../images/Katsigiannis/clientLogo.png"><pre> </pre><h1>XPeditionary</h1></a>
+                    <a href="../XPeditions/xpeditions.html">XPeditions</a>
+                    <a href="../About Us/aboutUs.html" class="current">About Us</a>
+                    <a href="../Touch Base/touchBase.html">Touch Base</a>
+                    <button id="mode">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/></svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        
+        <main>
+                
+          
+                <section class="introduction">
+                    <h2>Know Your Strengths and Limits</h2>
+                    <p>Xtreme sports provide an adrenaline rush like no other, but knowing your strengths and limits is crucial to ensuring that your adventure is both thrilling and safe.</p>
+                    <p>Here at <strong>XPeditionary</strong> we will help you assess your physical and mental readiness, guide you in choosing the right activity, and provide helpful insights into the factors that can influence your Xperience.</p>
+                </section>
+            
+
+                <section class="physical-fitness">
+                    <h2>Physical Fitness Breakdown</h2>
+                    <p>Xtreme sports require a combination of various physical attributes.</p>
+                    <p>Understanding your body's capabilities will help you know which sports you're ready for and which might require additional preparation.</p>
+                    <ul>
+                        <li>
+                            <strong>Strength:</strong>
+                            <p>Core and upper body strength are essential for activities like rock climbing, paragliding, and canyoning.</p>
+                            <p>Strength helps you maintain control over your body and gear, especially in high-pressure situations.</p>
+                        </li>
+
+                        <li>
+                            <strong>Endurance:</strong>
+                            <p>Cardiovascular fitness is crucial for sports like kayaking, mountain biking, and canyoning, which require prolonged physical activity and stamina.</li>
+                        <li>
+                            <strong>Agility:</strong>
+                            <p>Quick reflexes and agility are important in activities like kite surfing and snowboarding, where rapid movements and changes in direction are frequent.</p>
+
+                        </li>
+
+                        <li>
+                            <strong>Flexibility:</strong>
+                            <p>Flexibility prevents injuries and is particularly important for activities that involve balance and dynamic body movements, such as rock climbing and snowboarding.</p>
+                        </li>
+                    </ul>
+                    <p><em>*Understanding your physical strengths will help you determine which activities are right for you and help avoid overexertion during your XPedition.*</em></p>
+                </section>
+            
+              
+                <section class="mental-readiness">
+                    <h2>Mental Readiness</h2>
+                    <p>Xtreme sports aren't just about physical strength. Mental readiness is just as important.</p>
+                    <p>You need to be prepared to handle challenges, stay calm under pressure, and maintain focus even in high-risk situations.</p>
+                    <ul>
+                        <li>
+                            <strong>Focus:</strong> 
+                            <p>Many Xtreme sports require constant concentration. Activities like paragliding, rock climbing, and kayaking demand that you remain mentally focused to ensure both your safety and success.
+
+                        </li>
+
+                        <li>
+                            <strong>Stress Management:</strong> 
+                            <p>Xtreme sports can be mentally challenging, especially when facing fear or stress. </p>
+                            <p>Being able to stay calm and think clearly during stressful situations can make all the difference in ensuring a safe and enjoyable Xperience.</p>
+                        </li>
+
+                        <li>
+                            <strong>Confidence:</strong>
+                            <p>Confidence in your abilities, gear, and training is key to pushing your limits safely.</p>
+                            <p>Lack of confidence can hinder your performance and put you at risk.</p>
+                        </li>
+                    </ul>
+                    <p><em>*If you're feeling uncertain or nervous about participating in certain activities, take time to assess your comfort levels and, if necessary, speak with an instructor before moving forward.*</em></p>
+                </section>
+            
+                
+                <section class="assess-fitness">
+                    <h2>Assessing Your Fitness Level</h2>
+                    <p>Take the time to honestly assess your current physical condition and mental readiness before booking your XPedition.</p>
+                    <p>Use the following guidelines to help determine your fitness level:</p>
+                    <br>
+                    
+                    <div class="fitness-level">
+                        <h3>Physical Level</h3>
+                        <p>Rate yourself on the following categories to determine your fitness level:</p>
+                        <ul>
+                            <li>
+                                <strong>Strength:</strong> Can you do 10-15 pushups or hold a plank for 1-2 minutes? If yes, you may be ready for intermediate-level activities like rock climbing or snowboarding.
+                            </li>
+
+                            <li>
+                                <strong>Endurance:</strong> Can you walk 5-10 miles without getting overly fatigued? If yes, you might be ready for activities like kayaking or mountain biking.
+                            </li>
+
+                            <li>
+                                <strong>Agility:</strong> Can you quickly change direction or react to unpredictable movements? This is essential for sports like kite surfing and paragliding.
+                            </li>
+
+                            <li>
+                                <strong>Flexibility:</strong> Can you comfortably touch your toes or stretch your arms overhead? If yes, you're well-prepared for sports that require balance and flexibility like rock climbing or snowboarding.
+                            </li>
+
+                        </ul>
+                        
+                        <h3>Mental Level</h3>
+                        <p>Rate yourself on the following categories to determine your metal level:</p>
+                        <ul>
+                            <li><strong>Fear Tolerance:</strong> Do you feel comfortable taking risks or being in high-stress environments? If yes, activities like paragliding and rock climbing might be a good fit.</li>
+                            <li><strong>Focus:</strong> Are you able to stay calm and focused in potentially overwhelming situations? If yes, you might be ready for more intense sports.</li>
+                        </ul>
+                    </div>
+                </section>
+            
+                <section class="factors-to-consider">
+                    <h2>Factors to Consider Before Booking Your XPedition.</h2>
+                    <p>In addition to your physical and mental readiness, consider the following factors when booking your XPedition:</p>
+                    <ul>
+                        <li>
+                            <strong>Age:</strong> Age can impact your physical fitness and recovery time. Some activities may have age restrictions for safety reasons.
+                        </li>
+
+                        <li>
+                            <strong>Health Conditions:</strong> If you have a medical condition such as heart disease, asthma, or joint problems, consult a doctor before engaging in Xtreme sports.
+                        </li>
+
+                        <li>
+                            <strong>XPerience:</strong> If you're new to Xtreme sports, we recommend starting with beginner-friendly activities and working your way up.
+                        </li>
+
+                    </ul>
+                </section>
+            
+               
+                <section class="activity-recommendations">
+                    <h2>Recommended Activities Based on Your Fitness Level</h2>
+                    <p>Based on your self-assessment, we recommend the following activities for each fitness level:</p>
+                    <div class="level-recommendations">
+                        <strong>Beginner</strong>
+                        <ul>
+                            <li>
+                                Kayaking
+                            </li>
+
+                            <li>
+                                Water Skiing
+                            </li>
+                           
+                        </ul>
+                        <strong>Intermediate</strong>
+                        <ul>
+                            <li>
+                                Mountain Biking
+                            </li>
+                           
+                            <li>
+                                Snowboarding 
+                            </li>
+                        </ul>
+                        <strong>Advanced</strong>
+                        <ul>
+                            <li>
+                                Paragliding
+                            </li>
+
+                            <li>
+                                Rock Climbing
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            
+               
+                <section class="consultation">
+                    <h2>Need XPert Advice?</h2>
+                    <p>If you're unsure about your fitness or mental readiness, we offer consultations with our professional trainers who can help assess your suitability for different activities. </p>
+                    <p>This personalized consultation will ensure you're fully prepared and confident before booking your XPedition.</p>
+                    <a href="../Touch Base/contact.html">Schedule a consultation!</a>
+                </section>
+            
+                
+            
+                <section class="cta">
+                    <h2>Ready to Book Your XPedition?</h2>
+                    <p>Now that you understand your strengths and limits, it's time to book your perfect XPedition!</p>
+                    <a href="../XPeditions/bookNow.html">Book Your XPedition Now!</a>
+                </section>
+
+                
+                <div class="vertical-stack">
+                    <div class="vertical-item" id="vertical-item-know">
+                        <a href="./know.html">
+                            <img src="../../images/Georgiou/know.png" alt="Strength Icon" class="icon">
+                            <p><strong>Know Your Strengths And Limits</strong></p>
+                        </a>
+                    </div>
+                    
+                    <div class="vertical-item" id="vertical-item-train">
+                        <a href="./train.html">
+                            <img src="../../images/Georgiou/train.png" alt="Fitness Icon" class="icon">
+                            <p><strong>Train With The Best</strong></p>
+                        </a>
+                    </div>
+                    
+                    <div class="vertical-item" id="vertical-item-gear">
+                        <a href="./gear.html">
+                            <img src="../../images/Georgiou/gear.png" alt="Safety Icon" class="icon">
+                            <p><strong>Get Familiar With XP Gear</strong></p>
+                        </a>
+                    </div>
+                  </div>
+                  <br>
+                
+                  
+                
+                <script>
+   
+                    if (window.location.pathname.includes("know.html")) {
+                        var verticalItemKnow = document.getElementById('vertical-item-know');
+    
+    
+                        if (verticalItemKnow) {
+                            verticalItemKnow.style.backgroundColor = "rgb(155, 229, 36"; 
+                        }
+                    }
+
+                </script>
+            
+        
+            
+            
+            <section>
+                <ul>
+                
+                </ul>
+                <p>Back to <a href="./safetyFirst.html">Safety First</a></p>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© 2025, XPeditionary</p>
+            <p>Powered by <a href = "./devTeam.html">XPx5</a></p>
+        </footer>
+    </body>
+</html>
