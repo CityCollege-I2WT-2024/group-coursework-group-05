@@ -274,7 +274,7 @@ main a:hover{
     height: 100%;
     overflow: hidden;
     background-color: var(--box-shadow-color);
-    color: var(--topnav-a-color);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
